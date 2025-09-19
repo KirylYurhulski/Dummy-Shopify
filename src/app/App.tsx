@@ -1,5 +1,5 @@
-import { AppLayout } from './layout'
+import { MainLayout } from './layouts'
 
 export const App = () => {
-  return <AppLayout />
+  return <MainLayout />
 }

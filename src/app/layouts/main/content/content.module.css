@@ -1,0 +1,6 @@
+.content {
+  text-align: center;
+  min-height: calc(100vh - 64px);
+  height: 100%;
+  line-height: 120px  
+}

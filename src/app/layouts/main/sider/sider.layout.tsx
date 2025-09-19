@@ -1,17 +1,13 @@
-import React, {useState } from 'react'
+import { useState } from 'react'
 import { Button, Layout } from 'antd'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
-
-const style: React.CSSProperties = {
-  textAlign: 'center',
-  backgroundColor: 'white',
-}
+import style from './sider.module.css'
 
 export const SiderLayout = () => {
   const [collapsed, setCollapsed] = useState(false)
 
   return (
-    <Layout.Sider style={style} trigger={null} collapsible collapsed={collapsed}>
+    <Layout.Sider className={style.sider} trigger={null} collapsible collapsed={collapsed}>
       <Button
         type="text"
         icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}

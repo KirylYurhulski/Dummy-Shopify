@@ -1,20 +1,12 @@
-import React from 'react'
 import { Button, Layout, Typography, Badge } from 'antd'
 import { ShoppingCartOutlined } from '@ant-design/icons'
-
-const style: React.CSSProperties = {
-  height: 64,
-  paddingInline: 48,
-  lineHeight: '64px',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  backgroundColor: 'white',
-}
+import { NavLink } from 'react-router-dom'
+import { ROUTES } from '@/shared'
+import style from './header.module.css'
 
 export const HeaderLayout = () => {
   return (
-    <Layout.Header style={style}>
+    <Layout.Header className={style.header}>
       <Typography.Title
         level={5}
         style={{
@@ -24,7 +16,7 @@ export const HeaderLayout = () => {
           justifyContent: 'center',
         }}
       >
-        Dummy Shopify Redux Toolkit
+        <NavLink to={ROUTES.HOME}>Dummy Shopify Redux Toolkit</NavLink>
       </Typography.Title>
       <Badge count={3} offset={[10, 10]}>
         <Button shape="circle" size="large" icon={<ShoppingCartOutlined />}></Button>
