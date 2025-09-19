@@ -1,5 +1,7 @@
+import { ProductsListLayout } from '@/features'
+
 const HomePage = () => {
-  return <div>Home Page</div>
+  return <ProductsListLayout />
 }
 
 export const Component = HomePage

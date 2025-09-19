@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
       },
       {
         path: ROUTES.PRODUCTS_CATEGORY,
-        lazy: () => import('@/pages/product-category/product-category.page'),
+        lazy: () => import('@/pages/products-category/products-category.page'),
       },
       {
         path: ROUTES.PRODUCT,

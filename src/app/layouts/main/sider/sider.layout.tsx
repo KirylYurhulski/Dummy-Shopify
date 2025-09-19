@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button, Layout } from 'antd'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import style from './sider.module.css'
+import { CategoriesMenu } from '@/features'
 
 export const SiderLayout = () => {
   const [collapsed, setCollapsed] = useState(false)
@@ -18,6 +19,7 @@ export const SiderLayout = () => {
           height: 64,
         }}
       />
+      <CategoriesMenu />
     </Layout.Sider>
   )
 }
