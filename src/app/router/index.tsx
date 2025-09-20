@@ -13,11 +13,15 @@ export const router = createBrowserRouter([
         lazy: () => import('@/pages/home/home.page'),
       },
       {
+        path: ROUTES.PRODUCTS,
+        lazy: () => import('@/pages/products-overview/products-overview.page'),
+      },
+      {
         path: ROUTES.PRODUCTS_CATEGORY,
         lazy: () => import('@/pages/products-category/products-category.page'),
       },
       {
-        path: ROUTES.PRODUCT,
+        path: ROUTES.PRODUCTS_DETAIL,
         lazy: () => import('@/pages/product-detail/product-detail.page'),
       },
     ],

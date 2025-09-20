@@ -2,7 +2,7 @@ import { href, useNavigate } from 'react-router'
 import { Menu, type MenuProps } from 'antd'
 import { AppstoreOutlined } from '@ant-design/icons'
 import MenuItem from 'antd/es/menu/MenuItem'
-import { useGetCategoriesQuery } from '../../api/query'
+import { useGetCategoriesQuery } from '../../api/server.api'
 import { ROUTES } from '@/shared'
 
 type MenuItem = Required<MenuProps>['items'][number]

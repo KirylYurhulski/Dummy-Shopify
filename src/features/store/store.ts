@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query/react'
-import { categoryApi } from '../categories'
+import { baseApi } from './base-server.api'
 
 export const store = configureStore({
   reducer: {
-    [categoryApi.reducerPath]: categoryApi.reducer,
+    [baseApi.reducerPath]: baseApi.reducer,
   },
-  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(categoryApi.middleware),
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(baseApi.middleware),
 })
 
 setupListeners(store.dispatch)
