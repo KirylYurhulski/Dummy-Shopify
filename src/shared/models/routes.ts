@@ -2,7 +2,7 @@ import 'react-router-dom'
 
 export const ROUTES = {
   HOME: '/',
-  PRODUCTS: '/products',
+  PRODUCTS: '/products-all',
   PRODUCTS_CATEGORY: '/products/category/:slug',
   PRODUCTS_DETAIL: '/products/:productId',
   OTHER: '*',

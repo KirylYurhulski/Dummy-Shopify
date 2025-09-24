@@ -1,4 +1,4 @@
-import { href, NavLink, useNavigate } from 'react-router-dom'
+import { href, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { Button, Layout, Typography, Badge, Menu, type MenuProps } from 'antd'
 import { HomeOutlined, ShopOutlined, ShoppingCartOutlined } from '@ant-design/icons'
 import { ROUTES } from '@/shared'
@@ -14,12 +14,13 @@ const items: MenuItem[] = [
   },
   {
     key: ROUTES.PRODUCTS,
-    label: 'Products',
+    label: 'All Products',
     icon: <ShopOutlined />,
   },
 ]
 
 export const HeaderLayout = () => {
+  const location = useLocation()
   const navigate = useNavigate()
 
   return (
@@ -37,6 +38,7 @@ export const HeaderLayout = () => {
         items={items}
         style={{ width: '70%' }}
         onSelect={menuItem => navigate(href(menuItem.key))}
+        selectedKeys={[location.pathname]}
       />
       <Badge count={3} offset={[10, 10]}>
         <Button shape="circle" size="large" icon={<ShoppingCartOutlined />}></Button>

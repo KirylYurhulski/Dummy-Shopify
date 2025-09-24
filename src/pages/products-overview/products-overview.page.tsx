@@ -1,7 +1,7 @@
-import { ProductsListLayout } from '@/features'
+import { ProductEntities } from '@/features'
 
 const ProductsOverviewPage = () => {
-  return <ProductsListLayout />
+  return <ProductEntities />
 }
 
 export const Component = ProductsOverviewPage

@@ -1,5 +1,5 @@
 import { baseApi } from '@/features/store/base-server.api'
-import type { IProductRequestParams, IProductsResponse } from '../models/models'
+import type { IProductRequestParams, IProductsResponse } from '../models/product'
 
 const productsApi = baseApi.injectEndpoints({
   endpoints: build => ({

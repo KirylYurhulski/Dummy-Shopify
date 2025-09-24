@@ -1,4 +1,4 @@
-import { href, useNavigate } from 'react-router'
+import { href, useLocation, useNavigate } from 'react-router'
 import { Menu, type MenuProps } from 'antd'
 import { AppstoreOutlined } from '@ant-design/icons'
 import MenuItem from 'antd/es/menu/MenuItem'
@@ -8,6 +8,7 @@ import { ROUTES } from '@/shared'
 type MenuItem = Required<MenuProps>['items'][number]
 
 export const CategoriesMenu = () => {
+  const location = useLocation()
   const navigate = useNavigate()
   const { data } = useGetCategoriesQuery()
 
@@ -26,6 +27,12 @@ export const CategoriesMenu = () => {
       mode="inline"
       items={items}
       onSelect={menuItem => navigate(href(ROUTES.PRODUCTS_CATEGORY, { slug: menuItem.key }))}
+      selectedKeys={[selektedKey(location.pathname)]}
     />
   )
+}
+
+const selektedKey = (pathname: string): string => {
+  const pathParts = pathname.split('/').filter(Boolean)
+  return pathParts[pathParts.length - 1]
 }
